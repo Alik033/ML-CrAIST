@@ -1,0 +1,80 @@
+{
+    "version": "CrAIST_X2_V1",
+    "phase": "train",
+    "cuda": 0,
+    "ckpt": 74,
+    "experiment_description": "traing SR",
+    "train_yaml": "trainSR_X2_DIV2K.yaml",
+    "logger": "tensorboard",
+    "train_script_name": "common",
+    "module_script_name": "imageSR",
+    "class_name": "ImageSR",
+    "feature_num": 64,
+    "module_params": {
+        "upsampling": 2,
+        "res_num": 5,
+        "block_num": 1,
+        "bias": true,
+        "block_script_name": "OSA",
+        "block_class_name": "OSA_Block",
+        "window_size": 8,
+        "pe": true,
+        "ffn_bias": true
+    },
+    "total_epoch": 500,
+    "dataloader": "DIV2K_memory",
+    "dataset_name": "DIV2K",
+    "batch_size": 32,
+    "random_seed": 1234,
+    "dataset_params": {
+        "lr_patch_size": 64,
+        "degradation": "bicubic",
+        "image_scale": 2,
+        "subffix": "png",
+        "dataloader_workers": 4,
+        "dataset_enlarge": 64,
+        "color_jitter": false,
+        "color_config": {
+            "brightness": 0.02,
+            "contrast": 0.02,
+            "saturation": 0.02,
+            "hue": 0.02
+        },
+        "enable_reshuffle": false
+    },
+    "eval_dataloader": "memory",
+    "eval_dataset_name": "urban100",
+    "eval_batch_size": 1,
+    "lr_decay": 0.5,
+    "lr_decay_step": [
+        250,
+        500,
+        750,
+        1000
+    ],
+    "lr_decay_enable": true,
+    "optim_type": "AdamW",
+    "optim_config": {
+        "lr": 0.0005,
+        "betas": [
+            0.9,
+            0.999
+        ],
+        "weight_decay": 0.0001
+    },
+    "l1_weight": 1.0,
+    "log_step": 200,
+    "sample_step": 200,
+    "model_save_epoch": 1,
+    "use_tensorboard": false,
+    "checkpoint_names": {
+        "generator_name": "imageSR"
+    },
+    "log_root_path": "./train_logs",
+    "project_root": "./train_logs/CrAIST_X2_V1",
+    "project_summary": "./train_logs/CrAIST_X2_V1/summary",
+    "project_checkpoints": "./train_logs/CrAIST_X2_V1/checkpoints",
+    "project_samples": "./train_logs/CrAIST_X2_V1/samples",
+    "project_scripts": "./train_logs/CrAIST_X2_V1/scripts",
+    "reporter_path": "./train_logs/CrAIST_X2_V1/CrAIST_X2_V1_report"
+}
