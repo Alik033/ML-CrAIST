@@ -33,12 +33,18 @@ python train.py -v "CrAIST_X4_V1" -p train --train_yaml "trainSR_X4_DIV2K.yaml"
 python train.py -v "CrAIST_X2_V1" -p finetune --ckpt 79
 ```
 
-## test  
+## test large model
 ``` bash
 python test.py -v "CrAIST_X2_V1" --checkpoint_epoch 414 -t tester_Matlab --test_dataset_name "Urban100"
 python test.py -v "CrAIST_X3_V1" --checkpoint_epoch 584 -t tester_Matlab --test_dataset_name "Urban100"
 python test.py -v "CrAIST_X4_V1" --checkpoint_epoch 682 -t tester_Matlab --test_dataset_name "Urban100"
 ```
+## test lighter model
+```bash
+python test.py -v "CrAIST_X2_48" --checkpoint_epoch 414 -t tester_Matlab --test_dataset_name "Urban100"
+python test.py -v "CrAIST_X3_48" --checkpoint_epoch 584 -t tester_Matlab --test_dataset_name "Urban100"
+python test.py -v "CrAIST_X4_48" --checkpoint_epoch 682 -t tester_Matlab --test_dataset_name "Urban100"
+``
 - provide dataset path in env/env.json file  
 - other configurations are done using yaml files  
 
