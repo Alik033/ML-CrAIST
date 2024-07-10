@@ -22,10 +22,17 @@ pip3 install torch torchvision opencv-python matplotlib pyyaml tqdm tensorboardX
 ```
 
 ## Train  
+- Train the ML-CrAIST (Ours)
 ``` bash
 python train.py -v "CrAIST_X2_V1" -p train --train_yaml "trainSR_X2_DIV2K.yaml"
 python train.py -v "CrAIST_X3_V1" -p train --train_yaml "trainSR_X3_DIV2K.yaml"
 python train.py -v "CrAIST_X4_V1" -p train --train_yaml "trainSR_X4_DIV2K.yaml"
+```
+- Train the lighter version of ML-CrAIST (Ours-Li)
+``` bash
+python train.py -v "CrAIST_X2_48" -p train --train_yaml "trainSR_X2_DIV2K_48.yaml"
+python train.py -v "CrAIST_X3_48" -p train --train_yaml "trainSR_X3_DIV2K_48.yaml"
+python train.py -v "CrAIST_X4_48" -p train --train_yaml "trainSR_X4_DIV2K_48.yaml"
 ```
 
 ## Fine-tune  
