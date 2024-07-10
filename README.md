@@ -21,19 +21,19 @@ source venv_utsav/bin/activate
 pip3 install torch torchvision opencv-python matplotlib pyyaml tqdm tensorboardX tensorboard einops thop
 ```
 
-## train  
+## Train  
 ``` bash
 python train.py -v "CrAIST_X2_V1" -p train --train_yaml "trainSR_X2_DIV2K.yaml"
 python train.py -v "CrAIST_X3_V1" -p train --train_yaml "trainSR_X3_DIV2K.yaml"
 python train.py -v "CrAIST_X4_V1" -p train --train_yaml "trainSR_X4_DIV2K.yaml"
 ```
 
-## fine-tune  
+## Fine-tune  
 ``` bash
 python train.py -v "CrAIST_X2_V1" -p finetune --ckpt 79
 ```
 
-## test
+## Test
 **Use version "CrAIST_X2_V1" for ML-CrAIST model (Ours) and "CrAIST_X2_48" for lighter model (Ours-Li).**
 
 -- | Ours | --  |  | -- | Ours-Li | --
