@@ -43,11 +43,11 @@ Scale | Version | Epoch | |Scale | Version | Epoch
 3x | CrAIST_X3_V1 | 584 | |3x | CrAIST_X2_48 | 911
 4x | CrAIST_X4_V1 | 682 | |4x | CrAIST_X2_48 | 766
 
--e.g.,
+- e.g.,
 ``` bash
 python test.py -v "CrAIST_X2_V1" --checkpoint_epoch 414 -t tester_Matlab --test_dataset_name "Urban100"
 ```
-
 - provide dataset path in env/env.json file  
 - other configurations are done using yaml files  
-
+## Acknowledgement
+- [https://github.com/Francis0625/Omni-SR](https://github.com/Francis0625/Omni-SR)
