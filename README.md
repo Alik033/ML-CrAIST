@@ -34,11 +34,18 @@ python train.py -v "CrAIST_X2_V1" -p finetune --ckpt 79
 ```
 
 ## test
-**Use version "CrAIST_X2_V1" for large model and "CrAIST_X2_48" for lighter model.**
+**Use version "CrAIST_X2_V1" for ML-CrAIST model (Ours) and "CrAIST_X2_48" for lighter model (Ours-Li).**
+
+-- | Ours | --  |  | -- | Ours-Li | --
+--- | --- | --- | --- | --- | --- | ---
+Scale | Version | Epoch | |Scale | Version | Epoch
+2x | CrAIST_X2_V1 | 414 | |2x | CrAIST_X2_48 | 761
+3x | CrAIST_X3_V1 | 584 | |3x | CrAIST_X2_48 | 911
+4x | CrAIST_X4_V1 | 682 | |4x | CrAIST_X2_48 | 766
+
+-e.g.,
 ``` bash
 python test.py -v "CrAIST_X2_V1" --checkpoint_epoch 414 -t tester_Matlab --test_dataset_name "Urban100"
-python test.py -v "CrAIST_X3_V1" --checkpoint_epoch 584 -t tester_Matlab --test_dataset_name "Urban100"
-python test.py -v "CrAIST_X4_V1" --checkpoint_epoch 682 -t tester_Matlab --test_dataset_name "Urban100"
 ```
 
 - provide dataset path in env/env.json file  
