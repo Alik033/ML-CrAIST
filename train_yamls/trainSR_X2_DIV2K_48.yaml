@@ -1,0 +1,65 @@
+# Related scripts
+train_script_name: common
+module_script_name: imageSR #OmniSR Give module name
+class_name: ImageSR #OmniSR Give class name
+# Model Configuration
+feature_num: 48
+
+module_params:
+  upsampling: 2
+  res_num: 5 #OSA_Blocks
+  block_num: 1
+  bias: True
+  block_script_name: OSA
+  block_class_name: OSA_Block
+  window_size: 8
+  pe: True
+  ffn_bias: True
+
+# Training information
+total_epoch: 1000
+
+# Dataset
+dataloader: DIV2K_memory
+dataset_name: DIV2K 
+batch_size: 32
+random_seed: 1234
+dataset_params:
+  lr_patch_size: 64
+  degradation: bicubic
+  image_scale: 2
+  subffix: png
+  dataloader_workers: 1
+  dataset_enlarge: 64
+  color_jitter: False
+  color_config:
+    brightness: 0.02
+    contrast:   0.02
+    saturation: 0.02
+    hue:        0.02
+  enable_reshuffle: False
+
+eval_dataloader: memory
+eval_dataset_name: urban100
+eval_batch_size: 1
+
+# Optimizer
+lr_decay: 0.5
+lr_decay_step: [250, 500, 750, 1000]
+lr_decay_enable: True
+optim_type: AdamW
+optim_config:
+  lr: !!float 5e-4
+  betas: [0.9, 0.999]
+  weight_decay: !!float 1e-4
+
+# Losses
+l1_weight: 1.0
+
+# Log 
+log_step: 200
+sample_step: 200
+model_save_epoch: 1
+use_tensorboard: False
+checkpoint_names:
+  generator_name: imageSR
