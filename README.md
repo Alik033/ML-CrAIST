@@ -8,12 +8,12 @@
 
 - create virtual environment
 ``` bash
-python3 -m venv ./venv_utsav
+python3 -m venv ./venv_name
 ```
 
 - activte virtual environment
 ``` bash
-source venv_utsav/bin/activate
+source venv_name/bin/activate
 ```
 
 - install dependencies  
