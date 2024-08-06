@@ -55,6 +55,9 @@ Scale | Version | Epoch | |Scale | Version | Epoch
 python test.py -v "CrAIST_X2_V1" --checkpoint_epoch 414 -t tester_Matlab --test_dataset_name "Urban100"
 ```
 - provide dataset path in env/env.json file  
-- other configurations are done using yaml files  
+- other configurations are done using yaml files
+## Citation
+```
+```
 ## Acknowledgement
 - [https://github.com/Francis0625/Omni-SR](https://github.com/Francis0625/Omni-SR)
