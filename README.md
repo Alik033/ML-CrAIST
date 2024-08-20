@@ -58,6 +58,15 @@ python test.py -v "CrAIST_X2_V1" --checkpoint_epoch 414 -t tester_Matlab --test_
 - other configurations are done using yaml files
 ## Citation
 ```
+@misc{pramanick2024mlcraistmultiscalelowhighfrequency,
+      title={ML-CrAIST: Multi-scale Low-high Frequency Information-based Cross black Attention with Image Super-resolving Transformer}, 
+      author={Alik Pramanick and Utsav Bheda and Arijit Sur},
+      year={2024},
+      eprint={2408.09940},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2408.09940}, 
+}
 ```
 ## Acknowledgement
 - [https://github.com/Francis0625/Omni-SR](https://github.com/Francis0625/Omni-SR)
