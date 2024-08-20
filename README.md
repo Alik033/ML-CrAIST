@@ -1,4 +1,6 @@
-# ML-CrAIST : Multi-scale Low-high Frequency Information-based Cross Attention with Image Super-resolving Transformer
+# ML-CrAIST : Multi-scale Low-high Frequency Information-based Cross Attention with Image Super-resolving Transformer ![Views](https://komarev.com/ghpvc/?username=Alik033)
+
+**This paper has been accepetd in 27th International Conference on Pattern Recognition (ICPR 2024)**
 
 **The official repository with Pytorch**
 
