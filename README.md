@@ -6,6 +6,8 @@
 
 **The official repository with Pytorch**
 
+![Block](ML_CrIAST-diagram.png)
+
 ## Installation
 
 **Python 3.9.12**
