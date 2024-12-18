@@ -1,8 +1,8 @@
-# ML-CrAIST : Multi-scale Low-high Frequency Information-based Cross Attention with Image Super-resolving Transformer ![Views](https://komarev.com/ghpvc/?username=Alik033)
+# ML-CrAIST: Multi-scale Low-high Frequency Information-based Cross Attention with Image Super-resolving Transformer![Views](https://komarev.com/ghpvc/?username=Alik033)
 
 **Paper Link: [arXiv](https://arxiv.org/abs/2408.09940), [Springer](https://link.springer.com/chapter/10.1007/978-3-031-78305-0_19).**
 
-**This paper has been accepetd in 27th International Conference on Pattern Recognition (ICPR 2024).**
+**This paper has been accepted at the 27th International Conference on Pattern Recognition (ICPR 2024).**
 
 **The official repository with Pytorch**
 
@@ -12,12 +12,12 @@
 
 **Python 3.9.12**
 
-- create virtual environment
+- create a virtual environment
 ``` bash
 python3 -m venv ./venv_name
 ```
 
-- activte virtual environment
+- activate virtual environment
 ``` bash
 source venv_name/bin/activate
 ```
